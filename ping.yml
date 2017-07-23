@@ -1,6 +1,5 @@
 ---
- - hosts: csrvInt
-     tasks:
-      - name: ping servers
-        connection: local
-        ping: yes
+- hosts: csrvInt
+  name: ping servers
+  connection: local
+  ping: yes
