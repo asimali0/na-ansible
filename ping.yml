@@ -2,4 +2,3 @@
 - hosts: csrvInt
   name: ping servers
   connection: local
-  ping: yes
