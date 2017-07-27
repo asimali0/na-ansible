@@ -1,0 +1,18 @@
+---
+
+- name: GET STRUCTURED DATA BACK FROM CLI DEVICES
+  hosts: csr1
+  connection: local
+  gather_facts: False
+
+  tasks:
+
+    - name: GET SH IP INT BRIEF
+      ntc_show_command:
+        connection: ssh
+        template_dir: /home/ntc/library/ntc-templates/templates/
+        platform: cisco_ios
+        command: 'show ip interface brief'
+        host: "csrv1000"
+        username: "cisco"
+        password: "cisco"
