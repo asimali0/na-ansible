@@ -1,9 +1,9 @@
 ---
 - name: get facts from device
-   napalm_get_facts:
-     hostname=cisco_routers_o
-     username=cisco
-     #dev_os=ios
-     password=cisco
-     filter='facts,interfaces,bgp_neighbors'
+  napalm_get_facts:
+   hostname=cisco_routers_o
+   username=cisco
+   #dev_os=ios
+   password=cisco
+   filter='facts,interfaces,bgp_neighbors'
    register: result
