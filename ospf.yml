@@ -6,8 +6,8 @@
   tasks:
    - name: xyz
      host: "{{ ansible_host }}"
-     username: "cisco"
-     password: "cisco"
+     username: cisco
+     password: cisco
      ios_config:
        #connection: ssh
      #platform: cisco_ios
