@@ -5,7 +5,7 @@
   tasks:
    - name: xyz
      ios_command:
-       connection: ssh
+       #connection: ssh
      #platform: cisco_ios
        parents: "show ip interface brief"
   #username: "cisco"
