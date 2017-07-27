@@ -7,7 +7,7 @@
 
   tasks:
    - name: GET SH IP INT BRIEF
-     ios_command:
+     ios_config:
      connection: ssh
      #platform: cisco_ios
      command: 'show ip interface brief'
