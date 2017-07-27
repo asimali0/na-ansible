@@ -1,16 +1,16 @@
 ---
- - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
-   host: csr1000
-   #username: "cisco"
-   #password: "cisco"
-   gather_facts: False
+- name: GET STRUCTURED DATA BACK FROM CLI DEVICES
+  host: csr1000
+  #username: "cisco"
+  #password: "cisco"
+  gather_facts: False
 
-   tasks:
-    - name: GET SH IP INT BRIEF
-      ios_command:
-        connection: ssh
-        #platform: cisco_ios
-        command: 'show ip interface brief'
-        #host: "csrv1000"
-        #username: "cisco"
-        #password: "cisco"
+  tasks:
+   - name: GET SH IP INT BRIEF
+     ios_command:
+     connection: ssh
+     #platform: cisco_ios
+     command: 'show ip interface brief'
+     #host: "csrv1000"
+     #username: "cisco"
+     #password: "cisco"
