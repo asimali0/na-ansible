@@ -7,12 +7,10 @@
    gather_facts: False
 
   tasks:
-
-    - name: GET SH IP INT BRIEF
-      ntc_show_command:
+   - name: GET SH IP INT BRIEF
+      ios_command:
         connection: ssh
-        template_dir: /home/ntc/library/ntc-templates/templates/
-        platform: cisco_ios
+        #platform: cisco_ios
         command: 'show ip interface brief'
         host: "csrv1000"
         username: "cisco"
