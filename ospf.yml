@@ -5,12 +5,12 @@
   #password: "cisco"
   gather_facts: False
 
-  tasks:
+ tasks:
    - name: GET SH IP INT BRIEF
      ios_config:
      connection: ssh
      #platform: cisco_ios
-     command: 'show ip interface brief'
+     parents: "show ip interface brief"
      #host: "csrv1000"
      #username: "cisco"
      #password: "cisco"
