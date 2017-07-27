@@ -5,4 +5,3 @@
    username=cisco
    password=cisco
    filter='facts,interfaces,bgp_neighbors'
-   register: result
