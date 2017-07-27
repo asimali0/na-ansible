@@ -1,5 +1,5 @@
 ---
-- hosts: csrv1000
+- hosts: csrv
   gather_facts: False
   
   tasks:
