@@ -1,5 +1,5 @@
 ---
-- hosts: csrv1000
+- hosts: csrv
   connection: local
   gather_facts: False
   
