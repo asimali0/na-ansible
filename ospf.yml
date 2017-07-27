@@ -1,12 +1,12 @@
 ---
 - hosts: csrv
   connection: local
-  username: "cisco"
-  password: "cisco"
   gather_facts: False
   
   tasks:
    - name: xyz
+     username: "cisco"
+     password: "cisco"
      ios_command:
        #connection: ssh
      #platform: cisco_ios
