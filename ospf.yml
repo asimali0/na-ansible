@@ -1,5 +1,4 @@
 ---
-
  - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
    host: csr1000
    username: "cisco"
