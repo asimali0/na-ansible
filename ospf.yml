@@ -1,16 +1,20 @@
 ---
 - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
   hosts: csrv1000
+  ios_config:
+     connection: ssh
+     #platform: cisco_ios
+     parents: "show ip interface brief"
   #username: "cisco"
   #password: "cisco"
   gather_facts: False
 
- tasks:
-   - name: GET SH IP INT BRIEF
-     ios_config:
-     connection: ssh
+ #tasks:
+   #- name: GET SH IP INT BRIEF
+    # ios_config:
+     #connection: ssh
      #platform: cisco_ios
-     parents: "show ip interface brief"
+     #parents: "show ip interface brief"
      #host: "csrv1000"
      #username: "cisco"
      #password: "cisco"
