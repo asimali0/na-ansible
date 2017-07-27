@@ -1,7 +1,7 @@
 ---
 - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
   hosts: csrv1000
-  ios_config:
+  ios_command:
      connection: ssh
      #platform: cisco_ios
      parents: "show ip interface brief"
