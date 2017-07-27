@@ -5,7 +5,6 @@
   
   tasks:
    - name: xyz
-     host: "{{ ansible_host }}"
      ios_command:
      commands:
        - show run 
