@@ -6,15 +6,14 @@
   tasks:
    - name: xyz
      host: "{{ ansible_host }}"
+     ios_command:
+     commands:
+       - show run 
+     host: "{{ ansible_host }}"
      username: cisco
      password: cisco
-     ios_config:
-       #connection: ssh
-     #platform: cisco_ios
-      lines:
-        - show ip interface brief
-  #username: "cisco"
-  #password: "cisco"
+     register: config
+
   
 
  #tasks:
