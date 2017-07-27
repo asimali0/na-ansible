@@ -5,9 +5,9 @@
   gather_facts: no
   
   tasks
-    - name: get facts from device
-      napalm_get_facts:
-      hostname=cisco_routers_o
-      username=cisco
-      password=cisco
-      filter='facts,interfaces,bgp_neighbors'
+   - name: get facts from device
+     napalm_get_facts:
+     hostname=cisco_routers_o
+     username=cisco
+     password=cisco
+     filter='facts,interfaces,bgp_neighbors'
