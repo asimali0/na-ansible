@@ -1,8 +1,8 @@
 ---
  - name: GET STRUCTURED DATA BACK FROM CLI DEVICES
    host: csr1000
-   username: "cisco"
-   password: "cisco"
+   #username: "cisco"
+   #password: "cisco"
    gather_facts: False
 
    tasks:
