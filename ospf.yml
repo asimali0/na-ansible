@@ -4,14 +4,14 @@
   gather_facts: False
   
   tasks:
-   - name: xyz
-     ios_command:
-     commands:
+    - name: xyz
+      ios_command:
+      commands:
        - show run 
      #host: "{{ ansible_host }}"
-     username: cisco
-     password: cisco
-     register: config
+      username: cisco
+      password: cisco
+      register: config
 
   
 
