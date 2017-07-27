@@ -1,5 +1,5 @@
 ---
-- hosts: cisco_routers_o
+- hosts: csrv1000
   connection: local
   gather_facts: False
   
@@ -8,7 +8,7 @@
      ios_command:
      commands:
        - show run 
-     host: "{{ ansible_host }}"
+     #host: "{{ ansible_host }}"
      username: cisco
      password: cisco
      register: config
