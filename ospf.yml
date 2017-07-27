@@ -1,10 +1,11 @@
 ---
-- hosts: csrv1000
+- hosts: cisco_routers_o
   connection: local
   gather_facts: False
   
   tasks:
    - name: xyz
+     host: "{{ ansible_host }}"
      username: "cisco"
      password: "cisco"
      ios_config:
