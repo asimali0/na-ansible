@@ -5,9 +5,9 @@
   
   tasks:
     - name: xyz
-     ios_command:
-     commands:
-      - show run 
+      ios_command:
+      commands:
+       - show run 
       host: "{{ ansible_host }}"
       username: cisco
       password: cisco
