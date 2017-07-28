@@ -5,13 +5,13 @@
   
   tasks:
     - name: xyz
-    ios_command:
-    commands:
-     - show run 
-     host: "{{ ansible_host }}"
-     username: cisco
-     password: cisco
-     register: config
+     ios_command:
+     commands:
+      - show run 
+      host: "{{ ansible_host }}"
+      username: cisco
+      password: cisco
+      register: config
 
 
   
