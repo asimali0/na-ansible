@@ -6,4 +6,4 @@
         commands: show ip interface brief
         username: cisco
         password: cisco
-        transport: cli
+        # transport: cli
