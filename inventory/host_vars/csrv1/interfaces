@@ -1,0 +1,4 @@
+---
+# Interface configuration for the RTR1 Router in the host inventory
+  loopback_ip_address: 14.14.14.16/32
+

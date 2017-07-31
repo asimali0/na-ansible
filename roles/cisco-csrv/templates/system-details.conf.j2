@@ -1,0 +1,15 @@
+system {
+    domain-name {{ domain }};
+    time-zone {{ timezone }};
+    no-redirects;
+    switchover-on-routing-crash;
+    internet-options {
+        no-path-mtu-discovery;
+    }
+    name-server {{ nameserver }};
+    scripts {
+        commit {
+            file abcd.slax;
+        }
+    }
+}

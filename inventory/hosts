@@ -1,0 +1,9 @@
+[all:vars]
+testing=true
+
+[cisco-csrv]
+csrv1 ansible_host=172.16.2.15
+csrv2 ansible_host=172.16.2.16
+
+[cisco:children]
+cisco-csrv

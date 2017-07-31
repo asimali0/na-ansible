@@ -1,0 +1,15 @@
+system {
+    ntp {
+{% if ntp_boot_server is defined %}
+        boot-server {{ ntp_boot_server }};
+        server {{ ntp_boot_server }} prefer;
+{% endif %}
+
+{% for server in ntp_servers %}
+        server {{ server }} key 1;
+{% endfor %}
+        authentication-key 1 type md5 value "{{ ntp_auth_key }}";
+        trusted-key 1;
+        source-address  {{ loopback_ip_address | ipaddr('address') }};
+    }
+}
