@@ -12,16 +12,8 @@
 
     tasks:
 
-      # - name: SYS | Define provider
-      #   set_fact:
-      #     provider:
-      #       host: "{{ inventory_hostname }}"
-      #       username: "{{ mgmt_username }}"
-      #       password: "{{ mgmt_password }}"
-
       - name: IOS | Show clock
         ios_command: 
-          # provider: "{{ provider }}"
           username: "{{ mgmt_username }}"
           password: "{{ mgmt_password }}"          
           authorize: yes
