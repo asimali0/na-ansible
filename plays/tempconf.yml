@@ -7,5 +7,6 @@
         password: cisco
         authorize: yes
         auth_pass: cisco
-        src: test.conf
+        # src: test.conf
+        commands: "{{lookup('file', 'test.conf')}}"
         backup: yes
