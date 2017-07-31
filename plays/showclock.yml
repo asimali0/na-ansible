@@ -28,5 +28,5 @@
           auth_pass: cisco
           commands:
             - show clock
-          register: clock
+        register: clock
       - debug: msg="{{ clock.stdout }}"
