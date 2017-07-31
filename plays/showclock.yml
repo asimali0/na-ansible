@@ -17,7 +17,7 @@
           provider:
             host: "{{ inventory_hostname }}"
             username: "{{ mgmt_username }}"
-            host: "{{ mgmt_password }}"
+            password: "{{ mgmt_password }}"
 
       - name: IOS | Show clock
         ios_command: 
@@ -25,8 +25,8 @@
           commands:
             - show clock
           register: clock
-          authorize: yes
-          auth_pass: cisco
+          # authorize: yes
+          # auth_pass: cisco
       
       - debug: msg="{{ clock.stdout }}"
 
