@@ -1,0 +1,7 @@
+---
+- name: Configure with Template
+  hosts: csrv1
+  tasks:
+    - iosxr_config:
+        src: ../roles/cisco-crv/templates/test.cfg
+        backup: yes
