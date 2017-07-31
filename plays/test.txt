@@ -1,2 +1,1 @@
-interface GigabitEthernet 4
-description "Test via Template Second test"
+router ospf 260
