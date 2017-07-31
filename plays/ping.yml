@@ -4,7 +4,7 @@
   tasks:
     - ios_command:
         commands: show ip interface brief
-        username: cisco
-        password: cisco
+        # username: cisco
+        # password: cisco
       register: result
     - debug: var=result 
