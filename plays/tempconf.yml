@@ -3,5 +3,5 @@
   hosts: csrv1
   tasks:
     - iosxr_config:
-        src: ../roles/cisco-crv/templates/test.cfg
+        src: ../roles/cisco-crv/templates/test.cfg.j2
         backup: yes
