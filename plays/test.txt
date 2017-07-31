@@ -1,1 +1,1 @@
-router ospf 260
+router ospf 250
