@@ -1,4 +1,0 @@
----
-- hosts: csrv
-  name: ping servers
-  connection: local

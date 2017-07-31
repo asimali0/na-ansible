@@ -1,0 +1,12 @@
+#jinja2: lstrip_blocks: "True", trim_blocks: "True"
+system {
+  tacplus-server {
+
+{% for server in tacacs_servers %}
+        {{ server.ip }} {
+            secret "{{ server.secret }}";
+            source-address {{ loopback_ip_address | ipaddr('address') }};
+        }
+{% endfor %}
+    }
+}

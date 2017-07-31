@@ -1,9 +1,0 @@
----
-- name: First test playbook
-- hosts: centos
-- connection: local
-
-  tasks:
-   - name: Install HTTPD on CentOS
-     yum: name=httpd state=latest
-	

@@ -1,0 +1,4 @@
+---
+# Interface configuration for the RTR2 Router in the host inventory
+  loopback_ip_address: 17.17.15.15/32
+

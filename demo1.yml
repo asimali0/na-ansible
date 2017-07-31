@@ -1,6 +1,0 @@
----
-- hosts: centos
-  tasks:
-  -name: install
-    connection: local
-    apt: pkg=apache2 state=latest
