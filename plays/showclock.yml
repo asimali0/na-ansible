@@ -25,6 +25,8 @@
           commands:
             - show clock
           register: clock
+          authorize: yes
+          auth_pass: cisco
       
       - debug: msg="{{ clock.stdout }}"
 
