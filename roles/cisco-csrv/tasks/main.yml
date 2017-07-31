@@ -26,10 +26,10 @@
     - name: Assemble the templates into a single config file ## takes the templates created above and builds a FULL template file for each router
       assemble: src=/var/tmp/{{ inventory_hostname }} dest=/var/tmp/{{ inventory_hostname }}-full.conf
     - name: Install the Configuration to the Device # Install the configuration on the router using the dependant modules
-      junos_install_config:
+      iosxr_config:
         host: "{{ ansible_host }}"
-        user: "{{ cisco_user }}"
-        passwd: "{{ cisco_passwd }}"
+        username: "{{ cisco_user }}"
+        password: "{{ cisco_passwd }}"
         logfile: ../logs/{{ inventory_hostname }}-full.log # we are logging everything from the module run directly into the logs directory
         file: "/var/tmp/{{ inventory_hostname }}-full.conf"
         port: 22
