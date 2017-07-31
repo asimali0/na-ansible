@@ -6,4 +6,5 @@
         commands: show ip interface brief
         username: cisco
         password: cisco
-        # transport: cli
+      register: result
+    - debug: var=result 
