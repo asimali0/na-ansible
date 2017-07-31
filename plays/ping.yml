@@ -1,0 +1,9 @@
+---
+- name: Ping Google
+  hosts: csrv1
+  tasks:
+    - ios_command:
+        commands: show ip interface brief
+        username: cisco
+        password: cisco
+        transport: cli
