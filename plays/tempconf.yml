@@ -3,5 +3,5 @@
   hosts: csrv1
   tasks:
     - iosxr_config:
-        src: test.cfg
+        src: test.conf
         backup: yes
