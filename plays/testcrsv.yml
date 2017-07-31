@@ -9,4 +9,5 @@
         parents: interface GigabitEthernet4
         username: cisco
         password: cisco
+        authorize: yes
 
