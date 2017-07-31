@@ -5,8 +5,8 @@
     - iosxr_config:
         username: cisco
         password: cisco
-        authorize: yes
-        auth_pass: cisco
+        # authorize: yes
+        # auth_pass: cisco
         # src: test.conf
         commands: "{{lookup('file', 'test.conf')}}"
         backup: yes
