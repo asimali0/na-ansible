@@ -7,3 +7,4 @@
         password: cisco
         commands: "{{lookup('file', 'test.txt')}}"
         backup: yes
+  connection: local
