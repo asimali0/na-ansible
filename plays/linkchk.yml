@@ -1,5 +1,5 @@
 ---
-- name: Ping Google
+- name: Check Interfaces
   hosts: csrv1
   tasks:
     - ios_command:
