@@ -1,5 +1,6 @@
 [all:vars]
 testing=true
+ansible_connection = local
 
 [cisco-csrv]
 csrv1 ansible_host=172.16.2.15
