@@ -1,2 +1,1 @@
 router ospf 250
-network 172.16.0.0 0.0.255.255
