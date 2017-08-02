@@ -1,12 +1,12 @@
 
 ---
 - name: Configure Interface
-  hosts: csrv1
+  hosts: cisco-csrv
   tasks:
     - ios_config:
         lines: 
           - network 0.0.0.0 255.255.255.255 area 0
-        parents: router ospf 260
+        parents: router ospf 270
         username: cisco
         password: cisco
         authorize: yes
