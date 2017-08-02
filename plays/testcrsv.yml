@@ -6,9 +6,6 @@
     - ios_config:
         lines: 
           - network 0.0.0.0 mask 255.255.255.255
-          - neighbor 172.16.1.12 remote-as 100
-          - neighbor 172.16.1.12 remote-as self
-          - neighbor 172.16.1.12 next-hop-self
         parents: router bgp 200
         username: cisco
         password: cisco
