@@ -1,1 +1,1 @@
-router ospf 260
+show running-config
