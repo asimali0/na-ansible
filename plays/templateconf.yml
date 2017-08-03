@@ -7,6 +7,6 @@
     - ios_template:
         username: cisco
         password: cisco
-        src: configtemp.txt
+        src: configtemp.j2
         backup: yes
   
