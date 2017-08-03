@@ -1,0 +1,12 @@
+---
+- name: Configure with Template
+  hosts: csrv1
+  connection: local
+
+  tasks:
+    - ios_template:
+        username: cisco
+        password: cisco
+        src: configtemp.j2
+        backup: yes
+  
