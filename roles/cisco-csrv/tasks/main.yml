@@ -1,0 +1,41 @@
+---
+## This first block is a set of tasks that verify certain variables are correctly configured etc
+  - block:
+    - name: Check loopback
+      debug: msg="A proper formatted IP address is NOT assigned to the lo interface"
+      when: not loopback_ip_address | ipaddr
+      failed_when: not loopback_ip_address | ipaddr
+
+## This block clears out and sets up the directory for config file outputs and installs the configs to the router
+  - block:
+    - name: Make Destination Directory
+      file: path=/var/tmp/{{ inventory_hostname }} state=directory
+    - name: Make the Log Directory
+      file: path=../logs/{{ inventory_hostname }} state=directory
+    - name: Remove the existing config files
+      file: path="/var/tmp/{{ inventory_hostname }}" state=absent
+    - name: Remove previous file
+      file: path=/var/tmp/{{ inventory_hostname }}-full.conf state=absent
+    - name: Make Destination Directory
+      file: path=/var/tmp/{{ inventory_hostname }} state=directory
+    - name: Build templates ## the task loops over the router_features variable to create various numbers of config files depending on what features are passed
+      # Notice the source and destination names are created dynamically through the use of the index_items loop. This gives us unique ordered names for the files
+      # Additionally there is a format option there to ensure the config numbers are 3 digits and include the word "config" in front of them
+      template: src={{ item.1 }}.conf.j2 dest=/var/tmp/{{ inventory_hostname }}/{{ 'config%03d' | format(item.0) }}-{{ inventory_hostname }}-{{ item.1 }}.conf
+      with_indexed_items: "{{ router_features }}" # this variable is set when calling the role as a part of a playbook
+    - name: Assemble the templates into a single config file ## takes the templates created above and builds a FULL template file for each router
+      assemble: src=/var/tmp/{{ inventory_hostname }} dest=/var/tmp/{{ inventory_hostname }}-full.conf
+    - name: Install the Configuration to the Device # Install the configuration on the router using the dependant modules
+      iosxr_config:
+        host: "{{ ansible_host }}"
+        username: "{{ cisco_user }}"
+        password: "{{ cisco_passwd }}"
+        logfile: ../logs/{{ inventory_hostname }}-full.log # we are logging everything from the module run directly into the logs directory
+        file: "/var/tmp/{{ inventory_hostname }}-full.conf"
+        port: 22
+        timeout: 300 # in seconds
+        replace: "{{ config_replace | default('no') }}" # by default we merge the config but have the option to replace.  May need to change to "Overwrite"
+      when: not testing|bool # only run this step when the boolean variable "testing" is set to false
+    - name: Remove the config files
+      file: path="/var/tmp/{{ inventory_hostname }}" state=absent
+      when: config_cleanup

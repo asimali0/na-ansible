@@ -1,0 +1,17 @@
+---
+# Define "System" variables specific to the group
+  domain: ryerson.ca
+  nameserver: 10.20.30.40
+  tacacs_servers:
+    - ip: 10.11.12.13
+      secret: abcdefhijkl
+    - ip: 10.11.12.14
+      secret: mnopqrstuvw
+  ntp_servers:
+    - 15.15.15.10
+    - 15.15.15.11
+  ntp_auth_key: timeserverkey
+  syslog_hosts:
+    - 16.16.16.20
+    - 16.16.16.21
+    - 16.16.16.22

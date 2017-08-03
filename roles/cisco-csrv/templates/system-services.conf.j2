@@ -1,0 +1,13 @@
+system {
+  services {
+      ssh {
+          root-login deny;
+          protocol-version v2;
+          connection-limit 10;
+          rate-limit 10;
+          }
+      netconf {
+          ssh;
+          }
+      }
+}

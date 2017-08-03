@@ -1,0 +1,22 @@
+---
+  - name: Playbook to verify connectivity by grabbing facts from a Juniper device
+    
+    hosts: juniper
+   
+    roles:
+      - Juniper.junos
+    connection: local
+    
+    gather_facts: yes
+
+    tasks:
+
+
+      - name: Retrieve information from devices running Junos OS
+        junos_get_facts:
+          host={{ ansible_host }}
+          user={{ juniper_user }}
+          passwd={{ juniper_passwd }}
+        register: junos
+      - name: Print out facts
+        debug: msg="{{ inventory_hostname }} is running version {{ junos.facts.version_RE0 }} on RE0 and {{ junos.facts.version_RE1 }} on RE1 and is a {{ junos.facts.model }}"

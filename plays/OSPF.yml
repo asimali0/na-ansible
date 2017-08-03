@@ -1,0 +1,10 @@
+---
+- name: Configure with Template
+  hosts: csrv1
+
+  tasks:
+    - ios_command:
+        username: cisco
+        password: cisco
+        commands: "{{lookup('file', 'text1.txt')}}"
+        backup: yes

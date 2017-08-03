@@ -1,0 +1,24 @@
+---
+  - name: Cisco CSRv Config test
+    hosts: csrv1
+
+
+    vars_prompt:
+      - name: "mgmt_username"
+        prompt: "Username"
+        private: no
+      - name: "mgmt_password"
+        prompt: "Password"
+
+    tasks:
+
+      - name: IOS | Show clock
+        ios_command: 
+          username: "{{ mgmt_username }}"
+          password: "{{ mgmt_password }}"          
+          authorize: yes
+          auth_pass: cisco
+          commands:
+            - show clock
+        register: clock
+      - debug: msg="{{ clock.stdout }}"
