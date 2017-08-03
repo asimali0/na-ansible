@@ -8,5 +8,7 @@
         username: cisco
         password: cisco
         src: configtemp.j2
+        authorize: yes
+        auth_pass: cisco
         backup: yes
   
