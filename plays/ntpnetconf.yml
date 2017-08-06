@@ -8,7 +8,7 @@
   tasks:
     - name: set ntp server in the device
       netconf_config:
-        host: csrv1
+        host: 172.16.2.15
         username: cisco
         password: cisco
         xml: |
