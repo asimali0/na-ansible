@@ -3,7 +3,7 @@
 #   hosts: csrv1
 #   connection: local
 - name: Test Netconf
-  hosts: crsv1
+  hosts: csrv1
   connection: local
   tasks:
     - name: set ntp server in the device
