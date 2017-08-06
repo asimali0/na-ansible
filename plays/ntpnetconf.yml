@@ -11,6 +11,7 @@
         host: 172.16.2.15
         username: cisco
         password: cisco
+        port: 22
         xml: |
             <config xmlns:xc="urn:ietf:params:xml:ns:netconf:base:1.0">
                 <system xmlns="urn:ietf:params:xml:ns:yang:ietf-system">
