@@ -1,7 +1,7 @@
 ---
-- name: Configure with Netconf Config module
-  hosts: csrv1
-  connection: local
+# - name: Configure with Netconf Config module
+#   hosts: csrv1
+#   connection: local
 
 
 - name: set ntp server in the device
