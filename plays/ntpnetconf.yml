@@ -3,12 +3,12 @@
 #   hosts: csrv1
 #   connection: local
 - name: Test Netconf
-  # hosts: crsv1
-  # connection: local
+  hosts: crsv1
+  connection: local
   tasks:
     - name: set ntp server in the device
       netconf_config:
-        host: 172.16.2.15
+        host: csrv1
         username: cisco
         password: cisco
         xml: |
