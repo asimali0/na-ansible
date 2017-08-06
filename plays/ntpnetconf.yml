@@ -4,7 +4,7 @@
 #   connection: local
 - name: Test Netconf
   hosts: csrv1
-  connection: local
+  # connection: local
   tasks:
     - name: set ntp server in the device
       netconf_config:
