@@ -1,0 +1,15 @@
+---
+- name: Configure NTP with Template
+  hosts: csrv1
+  connection: local
+
+  tasks:
+    - ios_template:
+        username: cisco
+        password: cisco
+        # src: ../templates/configtemp.j2
+        src: ../templates/ntp.j2        
+        authorize: yes
+        # auth_pass: cisco
+        backup: yes
+  

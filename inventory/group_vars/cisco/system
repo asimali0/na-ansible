@@ -10,6 +10,8 @@
   ntp_servers:
     - 15.15.15.10
     - 15.15.15.11
+  ntp_prefer:
+    - 17.17.17.17
   ntp_auth_key: timeserverkey
   syslog_hosts:
     - 16.16.16.20

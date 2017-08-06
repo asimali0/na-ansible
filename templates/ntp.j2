@@ -1,0 +1,6 @@
+{% for server in ntp_servers %}
+        ntp server {{ server }} key 10;
+{% endfor %}
+{% if ntp_prefer is defined %}
+        ntp server {{ ntp_prefer }} key 10 prefer
+{% endif %}
