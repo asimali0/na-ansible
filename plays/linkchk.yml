@@ -3,7 +3,7 @@
   hosts: csrv4
   tasks:
     - ios_command:
-        commands: show ip protocols
+        commands: show running-config
         username: cisco
         password: cisco
       register: result
