@@ -1,6 +1,7 @@
 ---
 - name: Configure with Template
   hosts: csrv4
+  connection: local
   
 
   tasks:
