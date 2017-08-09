@@ -10,6 +10,6 @@
         # src: ../templates/configtemp.j2
         src: ../templates/IntConf.j2        
         authorize: yes
-        #auth_pass: cisco
+        auth_pass: cisco
         backup: yes
   
