@@ -1,6 +1,6 @@
 ---
 - name: Check Interfaces
-  hosts: csrv1
+  hosts: csrv4
   tasks:
     - ios_command:
         commands: show ip protocols
