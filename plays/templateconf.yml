@@ -1,7 +1,7 @@
 ---
 - name: Configure with Template
   hosts: csrv4
-  connection: local
+  #connection: local
 
   tasks:
     - ios_template:
