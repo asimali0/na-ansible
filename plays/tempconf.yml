@@ -8,4 +8,6 @@
         password: cisco
         commands: "{{lookup('file', 'test.txt')}}"
         backup: yes
+        authorize: yes
+        auth_pass: cisco
   
