@@ -10,3 +10,6 @@
         authorize: yes
         auth_pass: cisco
         #backup: yes
+        register: runningoutput
+    - debug: 
+        var: runningoutput
