@@ -4,6 +4,7 @@
 csrv1 ansible_host=172.16.2.15 
 csrv2 ansible_host=172.16.2.12
 csrv3 ansible_host=172.16.2.11
+csrv4 ansible_host=172.16.2.13
 
 [cisco:children]
 cisco-csrv
