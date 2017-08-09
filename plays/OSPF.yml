@@ -7,7 +7,7 @@
     - ios_command:
         username: cisco
         password: cisco
-        commands: show running-config 
+        commands: "{{lookup('file', 'text1.txt')}}" 
         authorize: yes
         auth_pass: cisco
       register: result
