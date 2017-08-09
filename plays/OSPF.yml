@@ -1,6 +1,6 @@
 ---
 - name: Configure with Template
-  hosts: csrv3
+  hosts: csrv4
 
   tasks:
     - ios_command:
