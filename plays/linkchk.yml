@@ -1,6 +1,7 @@
 ---
 - name: Check Interfaces
   hosts: csrv4
+  connection: local
   tasks:
     - ios_command:
         commands: show ip int br
