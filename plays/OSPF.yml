@@ -12,4 +12,4 @@
         auth_pass: cisco
         #backup: yes
         #register: runningoutput
-    - wait_for: result[]
+        wait_for: result[0]
